@@ -1,26 +1,12 @@
 import React, { useState } from "react";
-import { Calculator as CalculatorIcon } from "lucide-react";
+import { Calculator as CalculatorIcon, ArrowRight } from "lucide-react";
 
 export default function Calculator() {
   const [subscribers, setSubscribers] = useState(1000);
   const [months, setMonths] = useState(3);
 
-  const handleSubscriberInput = (e) => {
-    const value = Number(e.target.value);
-    if (!isNaN(value)) {
-      setSubscribers(value);
-    }
-  };
-
-  const handleMonthInput = (e) => {
-    const value = Number(e.target.value);
-    if (!isNaN(value)) {
-      setMonths(value);
-    }
-  };
-
-  const twitterCost = subscribers * 0.8 * months; // Cost per subscriber * number of subscribers * months
-  const platformCost = subscribers * 0 * months; // Free through platform
+  const twitterCost = subscribers * 0.8; // Assuming $0.80 per subscriber for Twitter ads
+  const platformCost = subscribers * 0; // Assuming $0.20 per subscriber through platform
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl mx-auto">
@@ -33,31 +19,8 @@ export default function Calculator() {
 
       <div className="space-y-6">
         <div>
-          <p className="mb-4">
-            I have{" "}
-            <input
-              type="number"
-              className="bg-slate-200 w-24 px-2 py-1 rounded"
-              name="subs"
-              value={2345}
-              id="subs"
-            />{" "}
-            subscribers and I will use the creator network for{" "}
-            <input
-              type="number"
-              name="mon"
-              id="mon"
-              className="bg-slate-200 w-16 px-2 py-1 rounded"
-              value={months}
-              onChange={handleMonthInput}
-              min="1"
-              max="12"
-            />{" "}
-            months.
-          </p>
-
-          <label className="block font-medium text-gray-700 mb-2">
-            I want to increase my subscriber count by:
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Target Subscribers
           </label>
           <input
             type="range"
@@ -86,7 +49,7 @@ export default function Calculator() {
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
           />
           <div className="text-center mt-2 text-lg font-semibold text-indigo-600">
-            {months} {months === 1 ? "month" : "months"}
+            {months} {months === 1 ? 'month' : 'months'}
           </div>
         </div> */}
 
@@ -108,7 +71,7 @@ export default function Calculator() {
             <p className="text-3xl font-bold text-green-600">
               ${platformCost.toLocaleString()}
             </p>
-            <p className="text-sm text-green-600 mt-1">100% cost savings</p>
+            <p className="text-sm text-green-600 mt-1">75% cost savings</p>
           </div>
         </div>
       </div>
