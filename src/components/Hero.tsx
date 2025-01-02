@@ -25,17 +25,22 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             Connect with other newsletter creators and exchange audiences to
             grow your subscriber base organically. Save up to{" "}
-            <span className="font-semibold text-indigo-600">75%</span> compared
+            <span className="font-semibold text-indigo-600">100%</span> compared
             to traditional advertising.
           </p>
-          {/* <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-            <button className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
+            <button
+              onClick={() =>
+                (window.location.href = "https://discord.gg/tGZAgPZjgz")
+              }
+              className="group w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
               Start Growing Today
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="w-full sm:w-auto bg-white text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-gray-200 hover:border-indigo-200">
-              Learn More
+              See How It Works
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

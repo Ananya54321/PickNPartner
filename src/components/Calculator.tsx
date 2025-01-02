@@ -71,7 +71,7 @@ export default function Calculator() {
             <p className="text-3xl font-bold text-green-600">
               ${platformCost.toLocaleString()}
             </p>
-            <p className="text-sm text-green-600 mt-1">75% cost savings</p>
+            <p className="text-sm text-green-600 mt-1">100% cost savings</p>
           </div>
         </div>
       </div>
