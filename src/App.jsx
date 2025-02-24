@@ -1,16 +1,16 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Calculator from "./components/Calculator";
 import ContactSection from "./components/ContactSection";
+import HowItWorks from "./components/HowItWorks";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       <Navbar />
       <Hero />
-
+      <HowItWorks />
       {/* Calculator Section */}
       <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
